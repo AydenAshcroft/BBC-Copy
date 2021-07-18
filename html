@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technology - BBC News</title>
+    <style type="text/css">
+      #topbar {
+        width: 1000px;
+        margin: 0 auto;
+        height: 40px;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: helvetica, Arial, Helvetica, sans-serif;
+      }
+
+      #logo {
+        margin-top: 8px;
+        width: 100px;
+        float: left;
+        margin-right: 8px;
+      }
+
+      .topbar-section {
+        float: left;
+        border-left: 1px#cccccc solid;
+        height: 100%;
+      }
+
+      #signin-image {
+        float: left;
+        width: 25px;
+        margin: 10px 15px;
+      }
+
+      #signin-text {
+        font-weight: bold;
+        font-size: 90%;
+        position: relative;
+        top: 10px;
+        padding-right: 50px;
+      }
+
+      #line {
+        float: left;
+        color: #cccccc;
+        height: 40px;
+      }
+
+      #bell {
+        height: 25px;
+        padding-top: 10px;
+        padding-right: 8px;
+        padding-left: 3px;
+        margin: 10px 8px 0 px;
+      }
+
+      #bell-div {
+        float: left;
+      }
+
+      .topbar-menu {
+        font-weight: bold;
+        font-size: 90%;
+        padding: 13px 15px 0 15px;
+        height: 27px;
+      }
+
+      #dropdown {
+        width: 25px;
+      }
+
+      #search-box {
+        background-color: #e4e4e4;
+        border: none;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 5px;
+        margin: 7px 0 7px 5px;
+        float: left;
+        width: 120px;
+      }
+
+      #search {
+        height: 26px;
+        margin-top: 7px;
+      }
+
+      #move {
+        position: relative;
+        bottom: 6px;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      #menu-bar-container {
+        background-color: #bb1919;
+        width: 100%;
+        height: 70px;
+        border-top: 2px solid #cccccc;
+      }
+
+      #menu-bar {
+        width: 1000px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        padding: 0;
+        margin: 0;
+        color: white;
+        font-size: 40px;
+        font-weight: normal;
+        padding-top: 12px;
+        float: left;
+      }
+
+      #local-news {
+        float: right;
+        border: 1px #bb4545 solid;
+        width: 280px;
+        padding: 5px 5px 0 10px;
+        margin: 9px 10px 0 0;
+      }
+
+      #local-news a {
+        color: white;
+        text-decoration: none;
+        font-size: 30px;
+        position: relative;
+        top: -10px;
+      }
+
+      #local-news a:hover {
+        text-decoration: underline;
+      }
+
+      #local-news img {
+        height: 40px;
+      }
+
+      #menu-bar-2-container {
+        background-color: #a91717;
+        width: 100%;
+      }
+
+      #menu-bar-2 {
+        width: 1000px;
+        margin: 0 auto;
+        height: 40px;
+      }
+
+      #menu-bar-2 a {
+        position: relative;
+        top: 6px;
+        text-decoration: none;
+        color: white;
+        padding-top: 5px;
+        font-size: 15px;
+        padding: 0 10px;
+        border-right: 1px solid #bb4545;
+      }
+
+      #menu-bar-2 a:hover {
+        text-decoration: underline;
+      }
+
+      .no-border {
+        border: none !important;
+      }
+
+      #down-arrow {
+        height: 10px;
+        position: relative;
+        top: 6px;
+      }
+
+      #page-container {
+        width: 1000px;
+        margin: 0 auto;
+      }
+
+      #main-article {
+        width: 1000px;
+        /*float:left;*/
+      }
+
+      h2 {
+        font-weight: normal;
+        margin-top: 40px;
+        font-size: 20px;
+        border-bottom: 2px solid #a91717;
+        width: 105px;
+      }
+
+      h3 a {
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+      }
+
+      h3 a:hover {
+        color: #1167a8;
+      }
+
+      #article-summary {
+        color: #5a5a5a;
+        width: 280px;
+        float: left;
+      }
+
+      #article-summary img {
+        height: 15px;
+        position: relative;
+        top: 1px;
+        padding-right: 5px;
+      }
+
+      #topic-link {
+        text-decoration: none;
+        color: #a91717;
+        border-left: 1px solid #cccccc;
+        padding-left: 9px;
+      }
+
+      #article-summary a:hover {
+        color: #1167a8;
+      }
+
+      #date {
+        padding-right: 3px;
+      }
+
+      #article-container {
+        float: left;
+        width: 700px;
+        border-right: 1px solid #cccccc;
+        padding-right: 20px;
+      }
+
+      #main-image {
+        width: 400px;
+        margin-left: 20px;
+      }
+
+      #article-hr {
+        border-top: 2px solid #a91717;
+        width: 50px;
+      }
+
+      .article-link {
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="topbar">
+      <img id="logo" src="images/bbc-logo.png" />
+
+      <div id="signin-div" class="topbar-section">
+        <img id="signin-image" src="images/Capture.PNG" />
+
+        <span id="signin-text">Sign in</span>
+      </div>
+
+      <div id="bell-div">
+        <img id="line" src="images/line.PNG" />
+
+        <img id="bell" src="images/bell.PNG" />
+      </div>
+
+      <div class="topbar-section topbar-menu">News</div>
+
+      <div class="topbar-section topbar-menu">Sport</div>
+
+      <div class="topbar-section topbar-menu">Weather</div>
+
+      <div class="topbar-section topbar-menu">iPlayer</div>
+
+      <div class="topbar-section topbar-menu">TV</div>
+
+      <div class="topbar-section topbar-menu">
+        <span id="move">More</span>
+
+        <img id="dropdown" src="images/dropdown.PNG" />
+      </div>
+
+      <div class="topbar-section">
+        <input id="search-box" type="text" value="Search" />
+
+        <input type="image" id="search" src="images/search.PNG" />
+      </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="menu-bar-container">
+      <div id="menu-bar">
+        <h1>NEWS</h1>
+
+        <div id="local-news">
+          <a href="">Find Local News</a>
+
+          <img src="images/pointer.PNG" />
+        </div>
+      </div>
+
+      <div class="clear"></div>
+
+      <div id="menu-bar-2-container">
+        <div id="menu-bar-2">
+          <a href="">Home</a>
+
+          <a href="">UK</a>
+
+          <a href="">World</a>
+
+          <a href="">Business</a>
+
+          <a href="">Politics</a>
+
+          <a href="">Tech</a>
+
+          <a href="">Science</a>
+
+          <a href="">Health</a>
+
+          <a href="">Education</a>
+
+          <a href="">Entertainment & Arts</a>
+
+          <a href="">Video & Audio</a>
+
+          <a href="" class="no-border">More</a>
+
+          <img id="down-arrow" src="images/downarrow2.PNG" />
+        </div>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="page-container">
+      <div id="main-article">
+        <h2>Technology</h2>
+
+        <div id="article-container">
+          <h3><a href="">Asda bug exposed payment details</a></h3>
+
+          <div id="article-summary">
+            <p>
+              Security vulnerablilities that put customers at risk have affected
+              Asda's website for a couple of years, a security expert has
+              revealed.
+            </p>
+
+            <p>
+              <img id="clock" src="images/clock.PNG" /><span id="date"
+                >16 July 2021</span
+              >
+
+              <a id="topic-link" href="">Technology</a>
+            </p>
+
+            <hr id="article-hr" align="left" />
+
+            <p>
+              <a class="article-link" href=""
+                >Surveillance firm hit in hack attack</a
+              >
+            </p>
+            <p>
+              <a class="article-link" href=""
+                >eBay flaw has existed for months</a
+              >
+            </p>
+          </div>
+
+          <img src="images/asda.png" id="main-image" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
